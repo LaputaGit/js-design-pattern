@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>js设计模式-模板方法模式</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <h3 class="alert-demo">提示框demo</h3>
+  <!-- <h3 class="nav-demo">导航demo</h3> -->
+  <div class="alert-box">
+    <button class="base-alert">基础弹出框</button>
+  
+    <button class="title-alert">标题弹出框</button>
+  
+    <button class="cancel-alert">取消弹出框</button>
+  </div>
+  <div id="mask"></div>
+
+  <div class="nav-box">
+
+  </div>
+  
+  <script src="./index.js"></script>
+  <script>
+    document.querySelector('.alert-demo').onclick = function() {
+      document.querySelector('.alert-box').style.display = 'block'
+      document.querySelector('.nav-box').style.display = 'none'
+    }
+
+    // document.querySelector('.nav-demo').onclick = function() {
+    //   document.querySelector('.nav-box').style.display = 'block'
+    //   document.querySelector('.alert-box').style.display = 'none'
+    // }
+  </script>
+</body>
+</html>
